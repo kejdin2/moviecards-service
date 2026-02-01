@@ -1,4 +1,4 @@
-name: CI
+name: Service CI
 
 on:
   push:
@@ -16,5 +16,5 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Compile only
+      - name: Compile service
         run: mvn -B -DskipTests package
