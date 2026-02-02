@@ -22,7 +22,8 @@ public class Actor {
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date birthDate;
-
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date deadDate;
     private String country;
 
     @ManyToMany(mappedBy = "actors")
@@ -75,6 +76,15 @@ public class Actor {
     public void setMovies(List<Movie> movies) {
         this.movies = movies;
     }
+
+    public Date getDeadDate() {
+    return deadDate;
+    }
+
+    public void setDeadDate(Date deadDate) {
+    this.deadDate = deadDate;
+    }
+
 
     @Override
     public boolean equals(Object o) {
